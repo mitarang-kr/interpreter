@@ -228,7 +228,7 @@ const norm=s=>s.toLowerCase().replace(/[\s.,!?;:、。！？，「」"'·…-]/g
 let pendText="", pendTimer=null, lastShown="", lastShownAt=0;
 let recentShown=[];            // 최근 표시한 문장(정규화) 목록 — 시간과 무관하게 재전송을 거름
 const rawLog=[];               // 진단용: 음성인식이 실제로 보낸 확정 결과
-const MERGE_MS=1200, EXTEND_MS=5000, RECENT_MAX=15;
+const MERGE_MS=1500, EXTEND_MS=15000, RECENT_MAX=15;
 function flushPending(){
   clearTimeout(pendTimer); pendTimer=null;
   const t=pendText; pendText=""; if(!t) return;

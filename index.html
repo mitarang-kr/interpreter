@@ -198,7 +198,7 @@ async function handleFinal(text, replaceLast){
 /* 안드로이드: 확정 결과가 조각조각 여러 번 오므로 짧게 모았다가 한 문장으로 처리 */
 const norm=s=>s.toLowerCase().replace(/[\s.,!?;:、。！？，「」"'·…-]/g,"");
 let pendText="", pendTimer=null, lastShown="", lastShownAt=0;
-const MERGE_MS=1200, EXTEND_MS=4000;
+const MERGE_MS=2000, EXTEND_MS=4000;
 function flushPending(){
   clearTimeout(pendTimer); pendTimer=null;
   const t=pendText; pendText=""; if(!t) return;
